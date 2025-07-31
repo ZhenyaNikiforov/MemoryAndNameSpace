@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+/*-- Задача 1. Считающая функция. --*/
+
 void counting_function();
 
 int main() {

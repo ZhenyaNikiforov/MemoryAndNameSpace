@@ -1,31 +1,29 @@
 #include <iostream>
 using namespace std;
 
+/*-- Задание 2. Одинаковые, но разные функции --*/
+
 namespace sum {
-    void operation(int a, int b){
-        cout<<"Сложение: "<<a + b<<"\n";
-        return;
+    int operation(int a, int b){
+        return a + b;
     }
 }
 
 namespace inc {
-    void operation(int a, int b){
-        cout<<"Вычитание: "<<a - b<<"\n";
-        return;
+    int operation(int a, int b){
+        return a - b;
     }
 }
 
 namespace mul {
-    void operation(int a, int b){
-        cout<<"Умножение: "<<a * b<<"\n";
-        return;
+    int operation(int a, int b){
+        return a * b;
     }
 }
 
 namespace diw {
-    void operation(int a, int b){
-        cout<<"Деление: "<<a / b<<"\n";
-        return;
+    int operation(int a, int b){
+        return a / b;
     }
 }
 
@@ -36,10 +34,10 @@ int main(){
     
     cout<<"x = "<<firstNumber<<", y = "<<secondNumber<<"\n";
     
-    sum::operation(firstNumber, secondNumber);
-    inc::operation(firstNumber, secondNumber);
-    mul::operation(firstNumber, secondNumber);
-    diw::operation(firstNumber, secondNumber);
+    cout<<"Сложение: "<<sum::operation(firstNumber, secondNumber)<<"\n";
+    cout<<"Вычитание: "<<inc::operation(firstNumber, secondNumber)<<"\n";
+    cout<<"Умножение: "<<mul::operation(firstNumber, secondNumber)<<"\n";
+    cout<<"Деление: "<<diw::operation(firstNumber, secondNumber)<<endl;
     
     return 0;
 }
